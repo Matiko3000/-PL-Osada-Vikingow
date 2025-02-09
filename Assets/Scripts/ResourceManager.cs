@@ -12,6 +12,12 @@ public class ResourceManager : MonoBehaviour
 
     public event Action<ResourceType, int> OnResourceChanged;
 
+    [Header("Starting Materials")]
+    public int startingBuildingMats;
+    public int startingGold;
+    public int startingFood;
+    public int startingPopulation;
+
     private void Awake()
     {
         //make sure there is only 1 resource manager in scene
@@ -19,10 +25,10 @@ public class ResourceManager : MonoBehaviour
         else Destroy(gameObject);
 
         //initialize
-        foreach (ResourceType type in Enum.GetValues(typeof(ResourceType)))
-        {
-            resources[type] = 0;
-        }
+        resources[ResourceType.BuildingMats] = startingBuildingMats;
+        resources[ResourceType.Gold] = startingGold;
+        resources[ResourceType.Food] = startingFood;
+        resources[ResourceType.Population] = startingPopulation;
     }
 
     public int GetResourceAmount(ResourceType type)
