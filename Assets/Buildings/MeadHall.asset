@@ -10,20 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48d532ed44f7ca14ab2743abbab9a2af, type: 3}
-  m_Name: HuntersHut
+  m_Name: MeadHall
   m_EditorClassIdentifier: 
-  buildingName: "Chata My\u015Bliwego"
-  description: "Zapewnia pasywny przych\xF3d \u017Cywno\u015Bci"
-  icon: {fileID: 21300000, guid: 39ef3ee733c904f08a85268391803a80, type: 3}
+  isMeadHall: 1
+  buildingName: Sala Miodowa
+  description: "Zwi\u0119ksza liczb\u0119 maksymalnej populacji i daje dost\u0119p
+    do nowych budynk\xF3w."
+  icon: {fileID: 0}
   buildCosts:
-  - resourceType: 0
-    amount: 10
   - resourceType: 1
-    amount: 5
-  upgradeCostMultiplier: 2
-  buildButtonName: HuntersHutButton
+    amount: 20
+  - resourceType: 0
+    amount: 40
+  upgradeCostMultiplier: 1.5
+  buildButtonName: 
   productionRates:
-    resourceType: 2
-    amountPerCycle: 1
-    productionTime: 5
-  upgradeMultiplier: 2
+    resourceType: 3
+    amountPerCycle: 0
+    productionTime: 0
+  upgradeMultiplier: 1.5

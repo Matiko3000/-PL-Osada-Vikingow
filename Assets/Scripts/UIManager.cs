@@ -10,8 +10,12 @@ public class UIManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI foodText;
     [SerializeField] TextMeshProUGUI populationText;
 
+    [HideInInspector] public bool areBuildingsClickable;
+
+
     private void Start()
     {
+        areBuildingsClickable = true;//make the buildings clickable
         //Sub to event
         ResourceManager.Instance.OnResourceChanged += UpdateResourceDisplay;
 

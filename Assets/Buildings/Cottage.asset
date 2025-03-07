@@ -10,20 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48d532ed44f7ca14ab2743abbab9a2af, type: 3}
-  m_Name: HuntersHut
+  m_Name: Cottage
   m_EditorClassIdentifier: 
-  buildingName: "Chata My\u015Bliwego"
-  description: "Zapewnia pasywny przych\xF3d \u017Cywno\u015Bci"
-  icon: {fileID: 21300000, guid: 39ef3ee733c904f08a85268391803a80, type: 3}
+  isMeadHall: 0
+  buildingName: Dom Mieszkalny
+  description: "Zwi\u0119ksza populacj\u0119 w powolnym tempie."
+  icon: {fileID: 0}
   buildCosts:
   - resourceType: 0
+    amount: 20
+  - resourceType: 2
     amount: 10
-  - resourceType: 1
-    amount: 5
-  upgradeCostMultiplier: 2
-  buildButtonName: HuntersHutButton
+  upgradeCostMultiplier: 1.8
+  buildButtonName: CottageButton
   productionRates:
-    resourceType: 2
+    resourceType: 3
     amountPerCycle: 1
-    productionTime: 5
+    productionTime: 30
   upgradeMultiplier: 2

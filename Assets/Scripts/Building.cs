@@ -16,7 +16,7 @@ public class Building : MonoBehaviour
 
     private void StartProduction()
     {
-        if (!isProducing && buildingData.productionRates.Count > 0)
+        if (!isProducing && buildingData.productionRates != null)
         {
             StartCoroutine(ProduceResources());
         }
@@ -32,7 +32,7 @@ public class Building : MonoBehaviour
 
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.transform.IsChildOf(transform))
+                if (hit.transform.IsChildOf(transform) && FindObjectOfType<UIManager>().areBuildingsClickable)//check if all u can click the building
                 {
                     FindObjectOfType<BuildingUIManager>().ShowBuildingWindow(this);
                 }
@@ -45,14 +45,12 @@ public class Building : MonoBehaviour
     {
         isProducing = true;
 
-        while (true) // Pêtla produkcji
+        while (true) //production loop
         {
-            foreach (var production in buildingData.productionRates)
-            {
-                yield return new WaitForSeconds(production.productionTime);
-                ResourceManager.Instance.AddResource(production.resourceType, production.amountPerCycle);
-            }
+            yield return new WaitForSeconds(buildingData.productionRates.productionTime);
+
+            int amountToProduce = buildingData.GetProductionAmount(buildingData.productionRates, BuildingLevel);//calculate production based on level
+            ResourceManager.Instance.AddResource(buildingData.productionRates.resourceType, amountToProduce);
         }
     }
-
 }

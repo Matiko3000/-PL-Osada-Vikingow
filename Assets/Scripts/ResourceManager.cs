@@ -17,6 +17,7 @@ public class ResourceManager : MonoBehaviour
     public int startingGold;
     public int startingFood;
     public int startingPopulation;
+    public int maxPopulation = 20;
 
     private void Awake()
     {
@@ -39,6 +40,9 @@ public class ResourceManager : MonoBehaviour
     public void AddResource(ResourceType type, int amount)
     {
         resources[type] += amount;
+        //handle maxpopulation
+        if (type == ResourceType.Population && resources[ResourceType.Population] > maxPopulation) resources[ResourceType.Population] = maxPopulation;
+
         OnResourceChanged?.Invoke(type, resources[type]);
     }
 
