@@ -48,7 +48,7 @@ public class WarManager : MonoBehaviour
             GameObject lossesPanel = warTypePanel.transform.Find("LossesPanel").gameObject;
 
             //Calculate values
-            float winChance = CalculateWinChance(i) * 100;
+            float winChance = (int)(CalculateWinChance(i) * 100);
             (int goldReward, int popChangeReward, int trophiesReward) = CalculateRewards(i, true);
             (int goldLoss, int popChangeLoss, int trophiesLoss) = CalculateRewards(i, false);
 
@@ -68,8 +68,8 @@ public class WarManager : MonoBehaviour
         int goldChange, populationChange, trophyChange;
         (goldChange, populationChange, trophyChange) = CalculateRewards(riskLevel, isWin);
 
-        //dont start war if not enough popul
-        if (Mathf.Abs(populationChange) > resourceManager.GetResourceAmount(ResourceManager.ResourceType.Population))
+        //dont start war if not enough population
+        if (GetPossiblePopulationLoss(riskLevel) > resourceManager.GetResourceAmount(ResourceManager.ResourceType.Population))
         {
             NotEnoughPopWindow.SetActive(true);
             return;
@@ -99,7 +99,7 @@ public class WarManager : MonoBehaviour
             case 3: baseChance = 0.40f; break;
             default: baseChance = 0.5f; break;
         }
-
+        
         float attackBonus = offensiveBuilding.BuildingLevel * 0.05f;
         float defenseBonus = defensiveBuilding.BuildingLevel * 0.02f; // Mniejszy wp³yw na szansê
 
@@ -122,6 +122,11 @@ public class WarManager : MonoBehaviour
         {
             return ((int)(-baseGold / 2 * rewardMultiplier), basePopLoss * 2, -baseTrophies);
         }
+    }
+
+    private int GetPossiblePopulationLoss(int riskLevel)//to check if user can even start the war
+    {
+        return 6 * riskLevel;
     }
 
     private void UpdateBonusPanel(GameObject panel, int gold, int pop, int trophies)//to correctly show values in warWindow

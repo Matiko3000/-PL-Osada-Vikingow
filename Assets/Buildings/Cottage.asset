@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cottage
   m_EditorClassIdentifier: 
   isMeadHall: 0
-  buildingName: "D\u0142ugi dom."
+  buildingName: "D\u0142ugi Dom"
   description: "Zwi\u0119ksza populacj\u0119 w powolnym tempie."
   icon: {fileID: 0}
   buildCosts:

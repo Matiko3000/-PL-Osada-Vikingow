@@ -7548,9 +7548,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cf728a0b8a2fd4478d417e05b28091a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingBuildingMats: 999
-  startingGold: 999
-  startingFood: 999
+  startingBuildingMats: 10
+  startingGold: 7
+  startingFood: 3
   startingPopulation: 15
   maxPopulation: 20
 --- !u!4 &338218688

@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: "OsadaViking\xF3w(DEV)"
+  productName: "OsadaViking\xF3w(WIN)"
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -286,7 +286,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 270654b7cbd904a07b4e6ed2d13055bf, type: 3}
+      m_Icon: {fileID: 2800000, guid: 322ce2b5b991d41139e2b1392cf2ee93, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
