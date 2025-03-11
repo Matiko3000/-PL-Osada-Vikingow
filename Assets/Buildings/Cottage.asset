@@ -13,18 +13,28 @@ MonoBehaviour:
   m_Name: Cottage
   m_EditorClassIdentifier: 
   isMeadHall: 0
-  buildingName: Dom Mieszkalny
+  buildingName: "D\u0142ugi dom."
   description: "Zwi\u0119ksza populacj\u0119 w powolnym tempie."
   icon: {fileID: 0}
   buildCosts:
   - resourceType: 0
-    amount: 20
-  - resourceType: 2
     amount: 10
+  - resourceType: 2
+    amount: 6
   upgradeCostMultiplier: 1.8
   buildButtonName: CottageButton
   productionRates:
     resourceType: 3
     amountPerCycle: 1
-    productionTime: 30
+    productionTime: 10
   upgradeMultiplier: 2
+  eduText: "Wikingowie mieszkali w d\u0142ugich domach (langhus), kt\xF3re by\u0142y
+    wykonane z drewna, torfu i kamienia. Dachy pokrywano strzech\u0105 lub darni\u0105,
+    co zapewnia\u0142o izolacj\u0119 w surowym klimacie Skandynawii. W \u015Brodku
+    dominuje jedno du\u017Ce pomieszczenie, gdzie ca\u0142a rodzina jad\u0142a, spa\u0142a
+    i pracowa\u0142a. Ogie\u0144 na \u015Brodku izby zapewnia\u0142 ciep\u0142o i
+    s\u0142u\u017Cy\u0142 do gotowania. W domach \u017Cy\u0142y r\xF3wnie\u017C zwierz\u0119ta,
+    szczeg\xF3lnie zim\u0105. Kobiety zajmowa\u0142y si\u0119 gospodarstwem, a m\u0119\u017Cczy\u017Ani
+    cz\u0119sto wyje\u017Cd\u017Cali na wyprawy handlowe lub wojenne. Spo\u0142eczno\u015B\u0107
+    wiking\xF3w by\u0142a silnie zwi\u0105zana, a dom stanowi\u0142 centrum \u017Cycia
+    rodzinnego i wsp\xF3lnotowego."

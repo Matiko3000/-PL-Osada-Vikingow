@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: GoldMine
   m_EditorClassIdentifier: 
   isMeadHall: 0
-  buildingName: "Kopalnia Z\u0142ota"
+  buildingName: Targowisko
   description: "Zapewnia pasywny przych\xF3d z\u0142ota."
   icon: {fileID: 0}
   buildCosts:
   - resourceType: 2
-    amount: 10
+    amount: 7
   - resourceType: 3
-    amount: 1
+    amount: 2
   upgradeCostMultiplier: 2
   buildButtonName: GoldMineButton
   productionRates:
@@ -28,3 +28,12 @@ MonoBehaviour:
     amountPerCycle: 1
     productionTime: 3
   upgradeMultiplier: 2
+  eduText: "Wikingowie nie byli znani z kopania z\u0142ota, ale bardzo cenili ten
+    kruszec. Z\u0142oto zdobywali g\u0142\xF3wnie poprzez handel i najazdy na bogate
+    klasztory oraz miasta Europy. S\u0142yn\u0119li z wyrobu pi\u0119knych ozd\xF3b
+    \u2013 pier\u015Bcieni, brosz, amulet\xF3w i bransolet, kt\xF3re cz\u0119sto
+    by\u0142y pokrywane z\u0142otem. Wielu wodz\xF3w nosi\u0142o bogato zdobione
+    bransolety jako symbol statusu i nagrody dla lojalnych wojownik\xF3w. Jednym
+    ze \u017Ar\xF3de\u0142 z\u0142ota by\u0142y tak\u017Ce \u0142upy zdobywane w
+    Bizancjum, gdzie niekt\xF3rzy wikingowie s\u0142u\u017Cyli jako gwardia wareska,
+    elitarna stra\u017C cesarska.\r\n"

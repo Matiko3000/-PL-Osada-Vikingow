@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48d532ed44f7ca14ab2743abbab9a2af, type: 3}
+  m_Name: Towers
+  m_EditorClassIdentifier: 
+  isMeadHall: 0
+  buildingName: Mury Obronne
+  description: "Odpowiadaj\u0105 za moc defensywy, zwi\u0119ksza stawki wojen i szans\u0119
+    na wygranie."
+  icon: {fileID: 0}
+  buildCosts:
+  - resourceType: 1
+    amount: 8
+  - resourceType: 2
+    amount: 8
+  upgradeCostMultiplier: 2
+  buildButtonName: TowersButton
+  productionRates:
+    resourceType: 0
+    amountPerCycle: 0
+    productionTime: 0
+  upgradeMultiplier: 0
+  eduText: "Wikingowie rzadko budowali monumentalne fortyfikacje, ale stosowali umocnienia
+    drewniane oraz kamienne mury, zw\u0142aszcza w osadach handlowych i kr\xF3lewskich
+    grodach. Warownie takie jak Trelleborg w Danii mia\u0142y okr\u0105g\u0142y kszta\u0142t
+    i by\u0142y solidnie bronione. Wikingowie cz\u0119sto u\u017Cywali wie\u017C
+    stra\u017Cniczych do obserwacji okolic i ostrzegania przed zagro\u017Ceniami,
+    takimi jak najazdy innych plemion lub chrze\u015Bcija\u0144skich wojsk. Cho\u0107
+    byli znani z atakowania innych, to r\xF3wnie\u017C musieli broni\u0107 swoich
+    ziem, zw\u0142aszcza gdy ich osady stawa\u0142y si\u0119 celem odwetowych wypraw."

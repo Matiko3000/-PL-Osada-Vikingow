@@ -395,7 +395,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c58ce9da6a2304ae38ac295d250f14da, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 903a8614f29984ddc9c7ae11e2680467, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1937,7 +1937,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7674720231332233804}
   m_Layer: 5
-  m_Name: UpgradeWindowPrefab
+  m_Name: UpgradeWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -19,9 +19,9 @@ MonoBehaviour:
   icon: {fileID: 0}
   buildCosts:
   - resourceType: 1
-    amount: 20
+    amount: 15
   - resourceType: 0
-    amount: 40
+    amount: 30
   upgradeCostMultiplier: 1.5
   buildButtonName: 
   productionRates:
@@ -29,3 +29,12 @@ MonoBehaviour:
     amountPerCycle: 0
     productionTime: 0
   upgradeMultiplier: 1.5
+  eduText: "Sala miodowa (mead hall) by\u0142a sercem ka\u017Cdej wioski i miejscem,
+    gdzie odbywa\u0142y si\u0119 uczty, narady oraz opowie\u015Bci o bohaterach.
+    Wikingowie pili mi\xF3d pitny (mj\xF8d), kt\xF3ry by\u0142 cenionym trunkiem,
+    wytwarzanym z miodu, wody i dro\u017Cd\u017Cy. W salach tych \u015Bpiewano pie\u015Bni,
+    snuto sagi i podejmowano wa\u017Cne decyzje. Skaldowie, czyli poeci nordyccy,
+    recytowali historie o Odynie, Thorze i wielkich wojownikach. Uczty mia\u0142y
+    te\u017C znaczenie rytualne \u2013 wznoszono toasty za bog\xF3w i poleg\u0142ych
+    wojownik\xF3w, a ka\u017Cda uczta by\u0142a okazj\u0105 do umacniania wi\u0119zi
+    w spo\u0142eczno\u015Bci.\r\n"

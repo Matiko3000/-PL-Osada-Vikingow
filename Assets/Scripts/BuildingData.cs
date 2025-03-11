@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
-using UnityEditor.Build;
 using UnityEngine;
 using static ResourceManager;
 
@@ -41,7 +40,10 @@ public class BuildingData : ScriptableObject
     [Header("Producing")]
     public ResourceProduction productionRates;
     public float upgradeMultiplier;
-    
+
+    [Header("Education")]
+    [TextArea] public string eduText;
+
 
 
     //get current upgrade costs(using this bcs scriptable object saves data after closing game, which messes up the prices after launching 2nd time in editor)

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d532ed44f7ca14ab2743abbab9a2af, type: 3}
   m_Name: LumberjacksHut
   m_EditorClassIdentifier: 
+  isMeadHall: 0
   buildingName: Chata Drwala
   description: "Zapewnia pasywny przych\xF3d drewna."
   icon: {fileID: 0}
@@ -27,3 +28,12 @@ MonoBehaviour:
     amountPerCycle: 1
     productionTime: 2
   upgradeMultiplier: 2
+  eduText: "Drewno by\u0142o jednym z najcenniejszych surowc\xF3w wiking\xF3w. U\u017Cywano
+    go do budowy dom\xF3w, statk\xF3w, broni oraz codziennych narz\u0119dzi. Drwale
+    musieli zna\u0107 si\u0119 na obr\xF3bce r\xF3\u017Cnych gatunk\xF3w drewna \u2013
+    d\u0119bina by\u0142a idealna na okr\u0119ty, a sosna na budow\u0119 dom\xF3w.
+    Wikingowie byli mistrzami w konstrukcji langskip\xF3w, czyli d\u0142ugich, smuk\u0142ych
+    statk\xF3w, kt\xF3re pozwala\u0142y im na szybkie przemieszczanie si\u0119 i
+    skuteczne rajdy. Rzemie\u015Blnicy u\u017Cywali tak\u017Ce drewna do rze\u017Abienia
+    ozdobnych element\xF3w i runicznych inskrypcji, kt\xF3re cz\u0119sto umieszczano
+    na budynkach i nagrobkach."

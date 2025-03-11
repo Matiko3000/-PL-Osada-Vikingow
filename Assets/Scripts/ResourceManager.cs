@@ -43,6 +43,8 @@ public class ResourceManager : MonoBehaviour
         //handle maxpopulation
         if (type == ResourceType.Population && resources[ResourceType.Population] > maxPopulation) resources[ResourceType.Population] = maxPopulation;
 
+        if (resources[type] < 0) resources[type] = 0;// make sure u dont get negative values
+
         OnResourceChanged?.Invoke(type, resources[type]);
     }
 

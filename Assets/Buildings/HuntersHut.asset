@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d532ed44f7ca14ab2743abbab9a2af, type: 3}
   m_Name: HuntersHut
   m_EditorClassIdentifier: 
+  isMeadHall: 0
   buildingName: "Chata My\u015Bliwego"
-  description: "Zapewnia pasywny przych\xF3d \u017Cywno\u015Bci"
+  description: "Zapewnia pasywny przych\xF3d \u017Cywno\u015Bci."
   icon: {fileID: 21300000, guid: 39ef3ee733c904f08a85268391803a80, type: 3}
   buildCosts:
   - resourceType: 0
@@ -25,5 +26,14 @@ MonoBehaviour:
   productionRates:
     resourceType: 2
     amountPerCycle: 1
-    productionTime: 5
+    productionTime: 4
   upgradeMultiplier: 2
+  eduText: "Polowanie by\u0142o wa\u017Cnym elementem \u017Cycia wiking\xF3w, zw\u0142aszcza
+    w regionach, gdzie hodowla zwierz\u0105t by\u0142a trudniejsza. \u0141owili ryby,
+    polowali na jelenie, dziki oraz ptactwo wodne. U\u017Cywali \u0142uk\xF3w, w\u0142\xF3czni
+    oraz pu\u0142apek. Sk\xF3ry zwierz\u0105t s\u0142u\u017Cy\u0142y do wyrobu ciep\u0142ej
+    odzie\u017Cy na mro\u017Ane skandynawskie zimy. Wikingowie byli tak\u017Ce mistrzami
+    w polowaniach na foki i wieloryby, a t\u0142uszcz tych zwierz\u0105t wykorzystywali
+    do o\u015Bwietlania domostw. Polowanie nie by\u0142o jednak tylko sposobem na
+    zdobycie po\u017Cywienia \u2013 dla wielu wojownik\xF3w by\u0142o tak\u017Ce
+    okazj\u0105 do doskonalenia umiej\u0119tno\u015Bci bojowych."

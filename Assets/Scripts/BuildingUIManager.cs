@@ -10,6 +10,7 @@ public class BuildingUIManager : MonoBehaviour
     [SerializeField] private GameObject upgradeWindowPrefab;
     [SerializeField] private GameObject NotEnoughMaterialsWindowPrefab;
     [SerializeField] private GameObject TooLowMeadHallLvlWindowPrefab;
+    [SerializeField] private GameObject EducationWindowPrefab;
     [SerializeField] private Transform uiCanvas; //parent
 
     [Header("Icons")]
@@ -17,6 +18,7 @@ public class BuildingUIManager : MonoBehaviour
     [SerializeField] Sprite goldIcon;
     [SerializeField] Sprite foodIcon;
     [SerializeField] Sprite populationIcon;
+    [SerializeField] Sprite warIcon;
 
     private GameObject currentWindow;
 
@@ -68,7 +70,7 @@ public class BuildingUIManager : MonoBehaviour
 
         ResourceProduction resourceProduction = building.buildingData.productionRates;
 
-        if (!building.buildingData.isMeadHall) //Regular UI
+        if (!building.buildingData.isMeadHall && building.buildingData.upgradeMultiplier != 0) //Regular UI, also check if there is passive income (there isnt for barracks and towers)
         { 
         bonusPanel.Find("BonusText1").GetComponent<TextMeshProUGUI>().text = (building.buildingData.GetProductionAmount(building.buildingData.productionRates, building.BuildingLevel).ToString()
             + "/" + building.buildingData.productionRates.productionTime.ToString()) + "s";
@@ -78,7 +80,15 @@ public class BuildingUIManager : MonoBehaviour
             + "/" + building.buildingData.productionRates.productionTime.ToString()) + "s";
         bonusPanel.Find("BonusIcon2").GetComponent<Image>().sprite = GetResourceIcon(building.buildingData.productionRates.resourceType);
         }
-        else //diffrent UI for MeadHall
+        else if (building.buildingData.upgradeMultiplier == 0)
+        {
+            bonusPanel.Find("BonusText1").GetComponent<TextMeshProUGUI>().text = building.BuildingLevel.ToString();
+            bonusPanel.Find("BonusIcon1").GetComponent<Image>().sprite = warIcon;
+
+            bonusPanel.Find("BonusText2").GetComponent<TextMeshProUGUI>().text = (building.BuildingLevel + 1).ToString();
+            bonusPanel.Find("BonusIcon2").GetComponent<Image>().sprite = warIcon;
+        }
+        else//diffrent UI for MeadHall
         {
             bonusPanel.Find("BonusText1").GetComponent<TextMeshProUGUI>().text = "m. " + FindObjectOfType<ResourceManager>().maxPopulation.ToString();
             bonusPanel.Find("BonusIcon1").GetComponent<Image>().sprite = GetResourceIcon(building.buildingData.productionRates.resourceType);
@@ -87,9 +97,9 @@ public class BuildingUIManager : MonoBehaviour
             bonusPanel.Find("BonusIcon2").GetComponent<Image>().sprite = GetResourceIcon(building.buildingData.productionRates.resourceType);
         }
 
-
         //set button actions
         currentWindow.transform.Find("BuildBtn").GetComponent<Button>().onClick.AddListener(() => BuildBuilding(building));
+        currentWindow.transform.Find("LearnBtn").GetComponent<Button>().onClick.AddListener(() => ShowEducationWindow(building));
         currentWindow.transform.Find("CloseBtn").GetComponent<Button>().onClick.AddListener(CloseWindow);
     }
 
@@ -170,6 +180,23 @@ public class BuildingUIManager : MonoBehaviour
 
         //create new one
         currentWindow = Instantiate(TooLowMeadHallLvlWindowPrefab, uiCanvas);
+        currentWindow.transform.Find("CloseBtn").GetComponent<Button>().onClick.AddListener(CloseWindow);
+        currentWindow.transform.Find("CloseBtn2").GetComponent<Button>().onClick.AddListener(CloseWindow);
+    }
+
+    private void ShowEducationWindow(Building building)
+    {
+        //delete previous windows if exists
+        if (currentWindow != null) Destroy(currentWindow);
+
+        //create new one
+        currentWindow = Instantiate(EducationWindowPrefab, uiCanvas);
+
+        //enter correct text
+        currentWindow.transform.Find("Text_Title").GetComponent<TextMeshProUGUI>().text = building.buildingData.buildingName;
+        currentWindow.transform.Find("Text_Info").GetComponent<TextMeshProUGUI>().text = building.buildingData.eduText;
+
+        //set up buttons
         currentWindow.transform.Find("CloseBtn").GetComponent<Button>().onClick.AddListener(CloseWindow);
         currentWindow.transform.Find("CloseBtn2").GetComponent<Button>().onClick.AddListener(CloseWindow);
     }
